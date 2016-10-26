@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 	<!-- Site Properities -->
-	<title>Ryan L. Hunt - About</title>
+	<title>Ryan L. Hunt - Hitchd</title>
 	<!-- build:css styles/main.css -->
 	<link rel="stylesheet" type="text/css" href="components/reset.css">
 	<link rel="stylesheet" type="text/css" href="components/site.css">
@@ -23,6 +23,9 @@
 	<link rel="stylesheet" type="text/css" href="components/segment.css">
 	<link rel="stylesheet" type="text/css" href="components/dropdown.css">
 	<link rel="stylesheet" type="text/css" href="components/icon.css">
+	<link rel="stylesheet" type="text/css" href="components/modal.css">
+	<link rel="stylesheet" type="text/css" href="components/dimmer.css">
+	<link rel="stylesheet" type="text/css" href="components/rail.css">
 	
 	
 	
@@ -37,6 +40,8 @@
 	<script src="components/visibility.js"></script>
 	<script src="components/sidebar.js"></script>
 	<script src="components/transition.js"></script>
+	<script src="components/dimmer.js"></script>
+	<script src="components/modal.js"></script>
 	
 	<!--ReportCard -->
 	<link rel="stylesheet" href="badges.css">
@@ -60,7 +65,10 @@
     margin: 5em 0em 0em;
     padding: 5em 0em;
   }
- 
+  .persona {
+	font-size: .90em;
+  }
+
   </style>
 
 </head>
@@ -72,7 +80,7 @@
 		<a class="item" href="index.html#work">Work</a>
 		<a class="item" href="index.html#writing">Writing</a>
 		<a class="item" href="index.html#portfolio">Portfolio</a>
-		<a class="item" href="cv.html">CV</a>
+
         <div class="right item">
           <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
         </div>
@@ -80,133 +88,149 @@
     </div>
   </div>
 
-	 <div class="ui sizer vertical stripe segment">
-		<div class="ui centered stackable grid main container">
-			<div class="row">
-        		<div class="fifteen wide column"> 
-					<div class="ui center aligned huge header">Work Experience</div>
-					
-					  <p><strong>Design Assistant</strong>, Meyer Sound</p>
-						  <ul>
-							<li>Monitor incoming design requests and assist with intake of projects by locating and acquiring architectural drawings and other pertinent details from clients.</li>
-							  <li>Assist Design Services staff in managing and inputing information into the Sales Support Database/Salesforce.</li>
-							  <li>Maintain digital files and information pertaining to project design.</li>
-							  <li>Work as a liaison between Design Services and internal and external parties as needed.</li>
-							  <li>Review architectural drawings using AutoCAD, Sketchup, Vectorworks, and/or Revit.</li>
-							  <li>Support department designers by taking on loudspeaker designs using MAPP and/or EASE. </li>
-						  </ul>
-					  <p><strong>UX Designer/Researcher</strong>, Freelance</p>
-						 <ul>
-							 <li>Ethnographic research specialist.</li>
-							 <li>Experience in gaining stakeholder support. </li>
-							 <li>Focus on creating a foundation for user engagement.</li>
-							 <li>Experience working across a broad range of products and environments.</li>
-						 </ul>
-					  <p><strong>Web Marketing Intern; UX</strong>, Kaiser Permanente</p>
-						 <ul>
-							 <li>Worked in a design team on a product for KPIT shared services</li>
-							 <li>Ensured content was coded and rendered properly in production environment.</li>
-							 <li>Managed the development of user research tools, documentation, and workflow for executive reporting.</li>
-							 <li>Developed content strategy for search engine optimization and user experience improvements. </li> 
-							 <li>Produced responsive web content in HTML for internal shared IT services. </li>
-							 <li>Key team player in implementing better web development workflows and version control that ensures the stability of the production environment.</li>
-						 </ul>
-					  <p><strong>Research Assistant</strong>, Opinion Dynamics</p>
-						 <ul>
-							 <li>Assisted project managers and analysts with project administration, data presentation, secondary research, and client deliverables.</li>
-							 <li>Helped with the programming and testing of surveys.</li>
-							 <li>Managed data collection tools and tracking results of field studies.</li>
-							 <li>Created maps (ArcGIS), graphics (Illustrator), and charts (Visio) for reports and proposals.</li> 
-							 <li>Formatted and prepared California’s 2014-2015 Evaluation, Measurement and Verification Roadmap for the California Public Utilities Commission.</li>
 
-						 </ul>
-					  <p><strong>Affordable Housing Advocate</strong>, Renewed Hope Housing</p>
-						 <ul>
-							 <li>Redesigned website with WordPress as the organization’s CMS and managed all new content for production.</li>
-							 <li>Customized template’s HTML and CSS to meet organization’s needs.</li>
-							 <li>Worked with local city officials, developers, and regional housing advocates to increase the supply of affordable housing in the City of Alameda. </li>
-							 <li>Participated in a Community Task Force to help the city decide how to best address rising rents, tenant/landlord issues, and improving local housing policy. </li>
+  <div class="ui main text container">
+    <h1 class="ui header">Hitchd</h1>
+        <div>
+    <h2>The problem</h2>
+      	<p>Carpooling to work is great in theory, but difficult in practice. Traditional carpooling relies on both the driver and the rider to have the same schedule and location in the morning and after work, making it inflexible, impractical and a major reason why commuters choose to sit in traffic and take their own vehicles, rather than consider carpooling as a realistic option. </p>
 
-						 </ul>
-
-					  <p><strong>Teaching Assistant</strong>, U.C. Berkeley, embARC Summer Design Academy</p>
-						 <ul>
-							<li>Lectured on the fundamentals of city planning, urban studies, and evidence based design research methods.</li> 
-							<li>Developed instructional guide for depth interviews.</li> 
-							<li>Created custom Tumblr portal for student engagement and participation.</li>
-						 </ul>
+      	<p>The benefits of carpooling are huge: a reduction in traffic, gasoline wasted and greenhouse gas emissions. Plus riders have the ability to be productive during commute time, rather than wasting it focused on the road. While governments do a lot to encourage carpooling, from building carpool lanes to executing expensive public awareness campaigns, little is done to address the inconveniences of carpooling. Enter Hitchd.</p>
+			
+    <h3>Vision Statement: To provide safe, flexible and reliable carpooling options for commuters.</h3> 
+	<h2>Solution</h2>
+		<p>Hitchd is a device and app combination that provides location-based carpool and ridesharing to commuters. Carpooling to work is great in theory, but difficult in practice. Traditional carpooling relies on both the driver and the rider to have the same schedule and location both in the morning and after work, making it inflexible, impractical and a major reason why commuters choose to sit in traffic and take their own vehicles, rather than considering carpooling as a realistic option.</p>  
 
 
-					  <p><strong>Community Engagement Program Assistant</strong>, The Working Group Not In Our Town</p>
-						 <ul>
-							<li>Drupal CMS administration for production environment.</li>
-							<li>Developed discussion guides for web (HTML) and print to engage local law enforcement leaders and community groups</li> 
-							<li>Production Assistant for video content.</li>
-							<li>Researched best practices in community oriented policing, hate crime enforcement, community engagement, and community relations.</li> 
-							<li>Assessed program implementation tactics, and conducted depth interviews with local government and institutional stakeholders for law enforcement outcomes.</li> 
-							<li>Disseminated research findings to stakeholders including community groups, law enforcement partners, and the Department of Justice.</li>
-						 </ul>
-
-					  <p><strong>Planning Intern</strong>, Silicon Valley Builders</p>
-						 <ul>
-							<li>Reviewed development projects plans for consistency with cities’ general plans and utilization of sustainable development best practices.</li> 
-							<li>Coordinated with area transit agencies to reduce vehicle miles traveled and develop parking requirements for new construction of multi-family housing. </li>
-							<li>Conducted a literature review of design elements of transit programs for use in developing a customized transit pass program for the VTA Transit Authority.</li> 
-							<li>Researched sustainable building materials for future projects.</li>
-						</ul>
-					
-					<div class="ui center aligned huge header">Education</div>
-					<div class="ui centered relaxed grid container">
-					<div class="left floated seven wide column row">
-						<div class="ui list">
-							<div class="item">
-							<div class="header">Bentley University</div>
-							</div>
-							<div class="item">Master of Science in Human Factors in Information Design  <p>2018 (expected)</p></div>
-						</div>
-					</div>
-					<div class="right floated seven wide column row">
-					<div class="ui list">
-						<div class="item">
-							<div class="header">University of California, Berkeley</div>
-						</div>
-						<div class="item">Bachelor of Arts in Urban Studies, Social and Cultural Factors Environmental Design <p>2014</p>
-						</div>
-						</div>
-					</div>
-					</div>
-					
-					<div class="ui center aligned huge header">Technical Skills</div>
-					<div class="ui centered relaxed grid container">
-					  <div class="left floated seven wide column row">
-						<div class="ui list">
-							<div class="item"><div class="header">WEB</strong></div></div>
-							  <div class="item">HTML</div>
-							  <div class="item">CSS</div>
-							  <div class="item">JavaScript</div>
-							  <div class="item">WordPress</div>
-							  <div class="item">Node.js</div>
-							  <div class="item">Gulp</div>
-						  </div>
-					</div>
-						<div class="right floated seven wide column row">
-						<div class="ui list">
-							<div class="item"><div class="header">DESIGN</div></div>
-							  <div class="item">Adobe Illustrator</div>
-							  <div class="item">Adobe Photoshop</div>
-							  <div class="item">Adobe InDesign</div>
-							  <div class="item">Visio</div>
-							  <div class="item">SketchUp</div>
-							  <div class="item">AutoCAD</div>
-							</div>
-						</div>
-					  
-					</div>
-					
-			</div>
-			</div>
+		<p>Because Hitchd is a flexible, one-way commute platform, it solves many of the challenges preventing commuters from carpooling. Plus, this product is beneficial for both drivers and riders. Drivers earn credits which can be cashed in for rides or gas, and riders can either purchase or earn credits by driving. The platform provides the flexibility to hitch a spur-of-the-moment ride home when you’ve wrapped up your work for the day, or schedule your ride in advance if you know you need to be home at a certain time. The app is also integrated with social APIs so you can see if your driver or rider has connections in common, making both users feel safer and more connected. </p> 
+			
+	<iframe src="https://www.slideshare.net/slideshow/embed_code/key/pEKSJivY6scSSS" width="700" height="565" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+		
+	<h2>Personas</h2>
+        <p>Hitchd has two primary personas: A driver and a rider. While we assume most drivers will use Hitchd to ride, and vice versa, we wanted to identify the unique needs of each user to focus on delivering the best possible experience for each while developing the product.</p>
+      <p/>
+	<div class="ui teal segment">
+	<div class="ui right rail">
+    <div class="ui secondary segment">
+      <h4>Pat Ryder</h4>
+		<div class="persona">
+			<p>Pat is a 29-year-old designer who lives in San Jose, California. He drives to work every day because public transportation isn’t a realistic option. His office isn’t close to the train station and if he took the bus, with transfer and traffic, it would take him 3 times as long as driving. He finds sitting in traffic alone frustrating, and looks at his 45-minute commute as lost time. Pat thinks that traditional ridesharing requires too much coordinating and carpooling isn’t an option because his coworkers don’t live near him, and his neighbors work different hours than he does. His goals are to get to work, and home from work, on time and safely, while saving money. Plus, since Pat’s an outgoing, adventurous type, he would love to meet new people along the way.</p>
+		</div>
+	</div>
+	</div>
+	  <img class="ui fluid image" src="themes/basic/assets/images/hitchd_rider_persona.png">
+	</div>
+	
+		
+	 <div class="ui purple segment">
+	<div class="ui left rail">
+    <div class="ui secondary segment">
+		<h4>Jo Dryver</h4>
+		<div class="persona">
+		 <p>Jo is a 34-year-old Medical Office Manager who also lives in San Jose, California. She lives in the city and drives her hybrid car to and from work. Sometimes she coordinates rides with friends and neighbors, but she finds their schedules can be unreliable. She’s frustrated when she offers a friend a ride to work, and then has to wait around for them to finish up at the end of the day, when she could be at home reading. She likes the idea of carpooling to reduce her carbon footprint, but wants a safe and reliable way to meet those in need of a ride. Her goals are also to arrive at work on time and safely,</p>
+		</div>
+		</div>
 		 </div>
-	  </div>
+		 <img class="ui fluid image" src="themes/basic/assets/images/hitchd_driver_persona.png">
+      </div>
+		
+      
+
+	<h1>Requirements</h1>
+		<ul>
+		  <li><strong>Seamless Interface for Riders &amp; Drivers</strong> - One app that supports both riders and drivers. This should make it easy for users who try riding on Hitchd to also offer a ride without having to download or learn a new app.</li>
+		  <li><strong>NFC Rider Check-in</strong> - Physical component on driver’s vehicle. The driver can be assured that the rider approaching their car is their Hitchd match, as the rider's phone will activate the NFC rider check-in and driver validation feature.</li>
+		  <li><strong>Scheduling Flexibility</strong> - Ability to both schedule your carpool ride in advance and hitch a spur of the moment ride.</li>
+		  <li><strong>Navigation</strong> - App should support navigation, possibly through Google Maps API, and seamlessly update the route when new riders enter the vehicle. </li>
+		  <li><strong>Social Component</strong> - Ability to connect with drivers after the ride is over, in case you have a similar route/timing and want to ride with them again. This will also allow users to rate their driver/rider and to share the details of their rides with their network in order to add a layer of safety.</li>
+		  <li><strong>Rating System</strong> - Ability for drivers and riders to provide anonymous feedback on one another, including a simple 5-star rating system as well as detailed feedback to Hitchd. User ratings will also be public, allowing other users to see the ratings of their potential driver or rider.</li>
+		  <li><strong>Stats/Analytics Dashboard</strong> - Allow users to see milage in driving and riding, with conversion to gallons of gas saved, carbon footprint reduced, etc, for positive feedback and encouragement to continue using Hitchd.</li>
+		</ul>
+      <p/>
+      <h2>The Hitchd Story</h2>
+	<img class="ui medium left floated image" src="themes/basic/assets/images/hitchd_nfc.png">
+      <p>Hitchd was born after interviewing drivers and public transit commuters about their commute experiences. While we were initially focused on making commute time more efficient, we identified a recurring problem for drivers in cities lacking public transportation: Carpooling is great in theory, but too inflexible. Because carpooling relies on matching locations and timing on both ends of the commute, it’s often not seriously considered as a commute alternative.</p>
+      <p/>
+      <p>Hitchd removes the interdependence of to-work and from-work commuting, allowing users to Hitch or schedule a ride when they need one. This eliminates the planning and coordination that makes carpooling unrealistic and provides a real, flexible option for commuters looking to save on gas, eliminate cars on the road, fight traffic and even reduce their carbon footprint.</p>
+      <p/>
+      <p>Here’s what Hitchd users had to say about Hitchd, based on original users interviewed and user testing on UserTesting.com:</p>
+	
+      <ul>
+        <li>
+			<p>Hitchd is <strong>"very thorough”</strong> and <strong>“well thought out”</strong></p>
+        </li>
+        <li>
+          <p>One user liked <strong>“the simplicity and the intuitive UI. Everything was self explanatory and to the point.”</strong></p>
+        </li>
+        <li>
+          <p>Another user said Hitchd is <strong>“Clean, crisp, modern design and graphics. Easy to use interface.”</strong></p>
+        </li>
+        <li>One user said Hitchd had a <strong>“clean and familiar feel”</strong> meaning we were in-line with our guiding design principles. </li>
+      </ul>
+	 
+      <iframe src="https://player.vimeo.com/video/164207570" width="700" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			
+	  <h2>How the Components &amp; Functionality Meet our Requirements:</h2>
+      <ul>
+        <li>
+          <p>Mobile App: Hitchd is one mobile application that can be used by both drivers and riders interchangeably. Based on our primary persona, users might want to hitch a ride one day and give a ride the next. The mobile app allows users to find a ride, schedule a ride, or provide a ride to someone in need for maximum flexibility. API integrations with Facebook and LinkedIn allow users to see social connections in common with their drivers or riders, and Google Maps API integration provides seamless navigation to drivers to drop off their riders without distractions. User ratings and user stats also provide feedback and motivation for users to continue to use the product.</p>
+        </li>
+        <li>
+          <p>NFC 3D Device: Upon signup, drivers are sent a 3D NFC device that they adhere to their vehicles. In Hitchd’s effort to provide safe carpooling options, the device allows drivers peace of mind, knowing only their Hitchd match will be allowed entry to their vehicle. The NFC device recognizes the smartphone app of the correct rider and unlocks the vehicle only for that rider.</p>
+        </li>
+      </ul>
+      <p/>
+	  
+      <h2>Design Principles:</h2>
+      <p>We relied on four main design principles to guide our development of Hitchd.</p>
+	</div>
+	</div>
+	<br>
+	
+	<div class="ui container">
+    	<div class="ui four stackable cards">
+		  <div class="card">
+			<div class="content">
+				<div class="header">“Transient applications must be simple, clear, and to the point.”</div>
+				<div class="description">Because our app is transient, mobile-specific and will definitely be used when multi-tasking or in a hurry, we designed it to be as simple and clear as possible.
+			  	</div>
+			</div>
+		  </div>
+		<div class="card">
+			<div class="content">
+				<div class="header">“Focus the design for each interface on a single primary persona.”</div>
+				<div class="description">While we used two personas in our mockups, they are truly interchangeable. Pat Ryder could be a rider on Monday and a driver on Tuesday, which is what makes the app so flexible and easy to use.</div>
+			</div>
+		</div>
+	  <div class="card">
+		<div class="content">
+			<div class="header">“Software should behave like a considerate human being.”</div>
+			<div class="description">We’ve built a prototype and product that remembers your home, work locations, profile info, and trip deviation, but allows you to update when desired.</div>
+		  </div>
+		</div>
+	  <div class="card">
+		<div class="content">
+			<div class="header">“Obey standards unless there is a truly superior alternative.”</div>
+			<div class="description">Ridesharing apps are popular. Instead of deviating from the standards set by Lyft and Uber, we’ve relied on their models to help users more easily adopt the products, making deviations clear in instructions.</div>
+    </div>
+		</div>
+		</div>
+	</div>
+	
+      <div class="ui main text container">
+      <p>Other design principles came into play at each stage of the application’s development. For example,<strong> “If it’s worth it to the user to do it, it’s worth it to the application to remember it.”</strong> When users build their profiles, ride information defaults to home, office and distance deviation preference.</p>
+      <p>From a visual design standpoint, we applied Fitts’ Law when designing large, easy to press buttons. We also used confirmation to allow users to confirm their ride preference instead of automatically forcing them to ride with a match. During the signup process, the app employs wayfinding to indicate how far through the 4-step sign-up process users are. And finally, the Hitchd stats page relies on motivation and positive feedback to get users interested in continuing to carpool with Hitchd.</p>
+      <p/>
+      <h2>What makes our product better than current solutions in the market?</h2>
+      <p>Hitchd capitalizes on connecting riders with drivers who are already on the road, unlike current rideshare options. And unlike ride-share boards, it’s algorithmic, requiring no work or coordination on the part of the drivers and riders to get Hitchd. Plus, Hitchd is mobile friendly and easy to access on the go. Hitchd also has an emphasis on safety: the additional security of the NFC device, plus ratings, social integration and safety contact alerts, allow you to feel safe and secure about your ride. Hitchd is fulfilling an unmet need, as identified by user research. Hitchd expands the market for ridesharing, while allowing the users to be in control of who they drive or ride with.</p>
+      <p>
+        <br/>
+	
+		<em>This prototype was created by <a href="https://www.linkedin.com/in/emilybaldi">Emily Baldi</a>, <a href="https://www.linkedin.com/in/kristinaeastham">Kristina Eastham</a>, and Ryan Hunt as our final project for a Prototyping class at Bentley University.</em>
+      </p>
+    </div>
+   
+  </div>
 	
 
 
@@ -214,7 +238,7 @@
     <div class="ui container">
       <div class="ui stackable inverted equal height centered stackable grid">
         <div class="three wide column">
-          <h4 class="ui pink inverted header">Social</h4>
+          <h4 class="ui inverted header">Social</h4>
           <div class="ui inverted link list">
             <a href="https://twitter.com/r_hunt" class="item">Twitter</a>
             <a href="https://www.linkedin.com/in/ryanlhunt" class="item">LinkedIn</a>
@@ -225,7 +249,7 @@
        
        
         <div class="four wide column">
-          <h4 class="ui pink inverted header">Oh, Hi!</h4>
+          <h4 class="ui inverted header">Oh, Hi!</h4>
           <p>I live with my wife, son, and dog in Berkeley, California. My favorite songwriter is Tom Waits, and I love tacos.</p>
         </div>
       </div>

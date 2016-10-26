@@ -11,13 +11,20 @@
 	<script src="semantic.min.js"></script>
 
   <style type="text/css">
+	
+    .description {
+	  font-size: .90em;
+    }
+	  #card-header {
+		font-size: 1.15 em;
+	  }
 
     .hidden.menu {
       display: none;
     }
 
     .masthead.segment {
-      min-height: 700px;
+      min-height: 450px;
       padding: 1em 0em;
     }
     .masthead .logo.item img {
@@ -27,7 +34,7 @@
       margin-left: 0.5em;
     }
     .masthead h1.ui.header {
-      margin-top: 3em;
+      margin-top: 1em;
       margin-bottom: 0em;
       font-size: 4em;
       font-weight: normal;
@@ -38,7 +45,7 @@
     }
 
     .ui.vertical.stripe {
-      padding: 7em 0em;
+      padding: 3.5em 0em;
     }
     .ui.vertical.stripe h3 {
       font-size: 3em;
@@ -160,10 +167,9 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
   <div class="ui container">
-		<a class="item" href="#">Home</a>
-		<a class="item" href="#work">Work</a>
-		<a class="item" href="#writing">Writing</a>
-		<a class="item" href="#portfolio">Portfolio</a>
+		<a class="active item" href="#">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
 	  	
     <div class="right menu">
       <div class="item">
@@ -179,10 +185,9 @@
 
     <div class="ui container">
       <div class="ui large secondary inverted pointing menu">
-        <a class="item">Home</a>
-		<a class="item" href="#work">Work</a>
-		<a class="item" href="#writing">Writing</a>
-		<a class="item" href="#portfolio">Portfolio</a>
+		<a class=" item" href="#">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
 		
         <div class="right item">
           <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
@@ -194,114 +199,198 @@
       <h1 class="ui inverted header">
         Ryan L. Hunt
       </h1>
-      <h2>User Researcher | Experience Designer</h2>
-		<a href="#work"><div class="ui huge inverted basic button">About <i class="right arrow icon"></i></div></a>
+      <h2>User Experience Researcher &amp; Designer</h2>
+		
     </div>
   </div>
 
   <div class="ui vertical stripe segment">
-    <div class="ui centered stackable grid container">
-      <div class="row">
-        <div class="eleven wide column">
-          <h3 class="ui header" id="work">Work</h3>
-          <p>I'm interested in how people use and interact with objects and space. That interest is the common thread through all the consulting and work that I have done. I like seeing how the things we design affect people and figuring out how to make those things better.</p>
-          <h3 class="ui header" id="writing">Writing</h3>
-			<p>I've written a lot about different topics and you can find some of my work <a href="https://medium.com/@ryanlhunt" target=_blank>here</a>. These pieces are mostly about society, culture, and place. Some pieces I wrote during my time at UC Berkeley where I majored in Urban Studies with a minor in Social and Cultural Factors in Environmental Design.</p>
-		  <h3 class="ui header" id="portfolio">Portfolio</h3>
-          	
-        </div> 
-      </div>
-	</div>
-  	
+    <div class="ui main container">
+		<div class="ui header"><h1>Work</h1></div>
+		<!--Work-->
+	<div class="ui main container">
+		<div class="ui three centered link cards">
 
-<!-- Portfolio -->	
-	  
-<div class="ui centered three column grid container">
-	<div class="eleven wide column">
-<div class="ui three stackable cards">
+			<a class="ui card" href="hitchd.html">
+				<div class="image">
+				  <img src="themes/basic/assets/images/hitchd_card.png">
+				</div>
+				<div class="content">
+				  <div class="header">Hitchd</div>
+					<div class="meta">
+					Research &amp; Prototype
+				  </div>
+				  <div class="description">
+					Carpooling app prototype.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+			</div>
+			</a>
+			
+			<a class="ui card" href="auto.html">
+				<div class="image">
+				  <img src="themes/basic/assets/images/auto-card.png">
+				</div>
+				<div class="content">
+				  <div class="header">Autonomous Cars</div>
+					<div class="meta">
+					Research
+				  	</div>
+				  <div class="description">
+					Various research projects on autonomous vehicles and the future of mobility.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+			</div>
+			</a>
+			
+			<a class="ui card" href="gastro.html">
+				<div class="image">
+				  <img src="themes/basic/assets/images/gastronaut-card.png">
+				</div>
+				<div class="content">
+				  <div class="header">Gastronaut</div>
+				  <div class="meta">
+					Research, Testing, &amp; Prototype
+				  </div>
+				  <div class="description">
+					Project description.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+			</div>
+			 </a>
+			
+			<a class="ui card" href="http://www.makebetterplaces.com/">
+				<div class="image">
+				  <img src="themes/basic/assets/images/mbp-cover.png">
+				</div>
+				<div class="content">
+				  <div class="header">Make Better Places</div>
+				  <div class="meta">
+					Consulting
+				  </div>
+				  <div class="description">
+					Research and engagement for housing developer. Web design and outreach collateral.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2015
+				  </span>
+				</div>
+		  </a>
 
-  <a class="ui card" href="http://www.makebetterplaces.com/">
-    <div class="image">
-      <img src="themes/basic/assets/images/mbp-cover.png">
-    </div>
-    <div class="content">
-      <div class="header">Make Better Places</div>
-      <div class="meta">
-        Consulting
-      </div>
-      <div class="description">
-        Research and engagement for housing developer. Web design and outreach collateral.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        2015
-      </span>
-    </div>
-  </a>
+			<a class="ui card" href="themes/basic/assets/work/Coworking_Ethnography_RyanHunt.pdf">
+				<div class="image">
+				  <img src="themes/basic/assets/images/coworking-card.png">
+				</div>
+				<div class="content">
+				  <div class="header">Coworking in Oakland</div>
+				  <div class="meta">
+					Research
+				  </div>
+				  <div class="description">
+					Case study on spatial and social dynamics of coworking.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2013
+				  </span>
+				</div>
+			</a>
+			
+				<!--Coming Soon
 
-  <a class="ui card" href="http://renewedhopehousing.org/">
-    <div class="image">
-      <img src="themes/basic/assets/images/renewed-hope.png">
-    </div>
-    <div class="content">
-      <div class="header">Renewed Hope Housing Advocates</div>
-      <div class="meta">
-        Web Design
-      </div>
-      <div class="description">
-        Redesigned website to improve usability and engagement.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        2014
-      </span>
-    </div>
-  </a>	
-	
-  <a class="ui card" href="themes/basic/assets/work/Coworking_Ethnography_RyanHunt.pdf">
-    <div class="image">
-      <img src="themes/basic/assets/images/coworking-card.png">
-    </div>
-    <div class="content">
-      <div class="header">Ethnographic Study of Coworking in Oakland</div>
-      <div class="meta">
-        Research
-      </div>
-      <div class="description">
-        Case study on spatial and social dynamics of coworking.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        2013
-      </span>
-    </div>
-  </a>
+		    <a class="ui card" href="http://www.makebetterplaces.com/">
+				<div class="image">
+				  <img src="http://placedog.com/200/200">
+				</div>
+				<div class="content">
+				  <div class="header">Title</div>
+				  <div class="meta">
+					Subtitle
+				  </div>
+				  <div class="description">
+					Project description.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+				</div>
+		  </a>
 			
 
+			<a class="ui card" href="http://www.makebetterplaces.com/">
+				<div class="image">
+				  <img src="http://placedog.com/200/200">
+				</div>
+				<div class="content">
+				  <div class="header">Baker's Reference</div>
+				  <div class="meta">
+					Prototype
+				  </div>
+				  <div class="description">
+					Project description.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+				</div>
+			</a>
 
-
-		<br>
-</div>
-
-		
-</div>
+			<a class="ui card" href="http://www.makebetterplaces.com/">
+				<div class="image">
+				  <img src="http://placedog.com/200/200">
+				</div>
+				<div class="content">
+				  <div class="header">Chatbot Interaction</div>
+				  <div class="meta">
+					Research Study
+				  </div>
+				  <div class="description">
+					Project description.
+				  </div>
+				</div>
+				<div class="extra content">
+				  <span class="right floated">
+					2016
+				  </span>
+			</div>
+			</a>
+			-->
+		</div>
 	</div>
 
-	
-  </div>	
 <br>
-</div>
 
-<div class="ui hidden divider"></div>
+
+        </div>
+		</div>
+
+
+
 	
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
       <div class="ui stackable inverted equal height centered stackable grid">
         <div class="three wide column">
-          <h4 class="ui pink inverted header">Social</h4>
+          <h4 class="ui inverted header">Social</h4>
           <div class="ui inverted link list">
             <a href="https://twitter.com/r_hunt" class="item">Twitter</a>
             <a href="https://www.linkedin.com/in/ryanlhunt" class="item">LinkedIn</a>
@@ -312,12 +401,13 @@
        
        
         <div class="four wide column">
-          <h4 class="ui pink inverted header">Oh, Hi!</h4>
+          <h4 class="ui inverted header">Oh, Hi!</h4>
           <p>I live with my wife, son, and dog in Berkeley, California. My favorite songwriter is Tom Waits, and I love tacos.</p>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
+
 </div>
 
 </body>

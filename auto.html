@@ -40,55 +40,226 @@
 	<script src="components/transition.js"></script>
 	
 	<!--ReportCard -->
-	<link rel="stylesheet" href="badges.css">
-	
-	
-  <style type="text/css">
-  body {
-    background-color: #FFFFFF;
-	font-size: 1.125em;
-  }
-  .ui.menu .item img.logo {
-    margin-right: 1.5em;
-  }
-  .main.container {
-    margin-top: 7em;
-  }
-  .wireframe {
-    margin-top: 2em;
-  }
-  .ui.footer.segment {
-    margin: 5em 0em 0em;
-    padding: 5em 0em;
-  }
- 
+ <style type="text/css">
+   .description {
+	  font-size: .90em;
+    }
+	  #card-header {
+		font-size: 1.15 em;
+	  }
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 1em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 3.5em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 3em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 2em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+	#work:before, #writing:before, #portfolio:before {
+		display: block;
+		position: relative;
+		content: " "; 
+		top: -100px;
+		height: 100px;
+		visibility: hidden;
+		
+}
+
+
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="components/visibility.js"></script>
+  <script src="components/sidebar.js"></script>
+  <script src="components/transition.js"></script>
+  <script>
+	  <!-- endbuild -->
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+	  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+  </script>
 
 </head>
 <body>
 <!-- Menu -->
-  <div class="ui large inverted fixed menu">
+  <div class="ui large top fixed hidden menu">
 	  <div class="ui container">
-        <a class="item" href="index.html">Home</a>
-		<a class="item" href="index.html#work">Work</a>
-		<a class="item" href="index.html#writing">Writing</a>
-		<a class="item" href="index.html#portfolio">Portfolio</a>
+		<a class="item" href="index.html">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
 
         <div class="right item">
           <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
         </div>
       </div>
     </div>
+
+<!-- Page Contents -->
+<div class="pusher">
+	  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+		<a class="item" href="index.html">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
+		
+        <div class="right item">
+          <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
 
-
+<div class="ui vertical stripe segment">
   <div class="ui main text container">
-    <h1 class="ui header">Autonomous Cars</h1>
-    <p>This is the description of the project </p>
-   
-  </div>
+    <h1 class="ui header">Autonomous Car Research</h1>
 	
+	<h2>Challenge</h2>
+    <p>Montaag was approached by a car interior parts manufacturer to find out how they could position themselves to be prepared when autonomous cars hit the market and are widely available.</p>
+   <h2>Project Overview</h2>
+	<p>The client is a international tier 2 car parts manufacturer that generates over a billion dollars in revenue each year selling interior parts to major car manufacturers. They wanted to embark on a project to develop seats and other interior parts that were specifically designed for the user of autonomous cars.</p>
+ 
+	<br>
+	
+	</div>
+	<div class="ui container">
+	<h4 style="text-align:center">People have wanted self-driving cars for a long time, and we're getting very close to that idea being a reality.</h4>
+		<div class="ui medium images" style="text-align:center">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr1.png">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr2.png">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr3.png">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr4.jpg">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr5.jpg">
+		<img class="ui image" src="themes/basic/assets/images/auto/autobkgr6.jpg">
+		</div>
+	</div>
+	<br>
+	<div class="ui text container">
+	<h2>Research Strategy</h2>
+	<p>I was brought in to develop a plan for researching what users expectations were for self-driving cars and how subject matter experts were planning for a future with self-driving cars. The client wanted us to examine the following ‘megatrends’:</p>
+	<ul>
+		<li>Autonomous Vehicles</li>
+		<li>Electrification</li>
+		<li>Flexible Mobility</li>
+		<li>Connectivity</li>
+		</ul>
+	<p>For this interrogation, I decided that an ethnographic research strategy would allow for both depth and breadth of the subject.  This strategy would include literature review, (potential) user depth interviews, Subject Matter Expert depth interviews, semantic analysis, secondary research, and emic/etic analysis. The design team and I interviewed informants across multiple industries and generations in order to compile a set of data that provides the broadest considerations. We conducted in-depth interviews with young people, old people, design students, computer science students, architects, city planners, tech workers, researchers, designers, and automotive industry experts. We also conducted observational studies of mobility services and interviewed drivers to understand their thoughts, needs and experiences. Our fieldwork was recorded and coded to allow for analysis of our findings. 
+	</p>
+	<h2>Results</h2>
+	<p>The final 130 page report consisted of 16 insights divided across three viewpoints: Market Change, Utilization Change, and Societal Change. Each insight included supporting primary and secondary research. 
 
+	This formative study was used as a catalyst for design workshops with the client at Montaag’s studio in Berkeley. These design workshop lead to the client moving forward with the design phase of the project.</p>
+	</div>
+	
+	
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
@@ -111,7 +282,7 @@
       </div>
     </div>
   </div>
-
+	</div>
 </body>
 
 </html>

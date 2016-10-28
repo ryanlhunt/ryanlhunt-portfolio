@@ -41,55 +41,220 @@
 	<script src="components/transition.js"></script>
 	
 	<!--ReportCard -->
-	<link rel="stylesheet" href="badges.css">
-	
-	
   <style type="text/css">
-  body {
-    background-color: #FFFFFF;
-	font-size: 1.125em;
-  }
-  .ui.menu .item img.logo {
-    margin-right: 1.5em;
-  }
-  .main.container {
-    margin-top: 7em;
-  }
-  .wireframe {
-    margin-top: 2em;
-  }
-  .ui.footer.segment {
-    margin: 5em 0em 0em;
-    padding: 5em 0em;
-  }
- 
+   .description {
+	  font-size: .90em;
+    }
+	  #card-header {
+		font-size: 1.15 em;
+	  }
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 1em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 3.5em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 3em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 2em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+	#work:before, #writing:before, #portfolio:before {
+		display: block;
+		position: relative;
+		content: " "; 
+		top: -100px;
+		height: 100px;
+		visibility: hidden;
+		
+}
+
+
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="components/visibility.js"></script>
+  <script src="components/sidebar.js"></script>
+  <script src="components/transition.js"></script>
+  <script>
+	  <!-- endbuild -->
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+	  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+  </script>
 
 </head>
 <body>
 <!-- Menu -->
-  <div class="ui large inverted fixed menu">
+  <div class="ui large top fixed hidden menu">
 	  <div class="ui container">
-        <a class="item" href="index.html">Home</a>
-		<a class="item" href="index.html#work">Work</a>
-		<a class="item" href="index.html#writing">Writing</a>
-		<a class="item" href="index.html#portfolio">Portfolio</a>
+		<a class="item" href="index.html">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
 
         <div class="right item">
           <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
         </div>
       </div>
     </div>
+
+<!-- Page Contents -->
+<div class="pusher">
+	  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+		<a class="item" href="index.html">Home</a>
+		<a class="item" href="writing.html">Writing</a>
+		<a class="item" href="about.html">About</a>
+		
+        <div class="right item">
+          <a class="ui inverted button" href="mailto:ryan@ryanlhunt.com">Contact</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
 
-
+<div class="ui vertical stripe segment">
   <div class="ui main text container">
     <h1 class="ui header">Gastronaut</h1>
-    <p>This is the description of the project </p>
-   
-  </div>
-	
+<h2>Problem Statement</h2>
+<p>Products that rely on documents and records to discovery detail about someone’s family history miss out on capturing potential users because of the history of global record keeping and governmental bureaucracy. What’s needed is a way to discovery the daily lives that happen between the events that are recorded by governments. </p>
+<h2>Market Definition</h2>
+<p>The current market consists of products that are overwhelmingly owned by the Mormon Church and operate for the benefit of their organization. LDS members have free access to a number of sites that are sponsored by the church. </p>
+<p>Rather than focusing on pedigree and lineage, Gastronaut focuses on culture. In essence, it focuses on the collective people and not the individuals. This shift in focus allows for more people to benefit from the service and learn more about where they’re from through the food of their community. </p>
+<h2>Key primary research findings</h2>
+<p>The pivotal piece of primary evidence was uncovered during the prototype testing at Bentley. Our participant described the difficulties he had when trying to learn about his family; He is a Chinese immigrant whose family’s records were destroyed during the Chinese Cultural Revolution. His challenges illustrated the that services like Ancestry have and the pain and frustration that results from running into dead ends.</p>
+<h2>Key secondary research findings</h2>
+<p>The key secondary research finding were the numerous genetic traits that are associates with taste, smell, and food. Considering that genetic preferences for certain flavors or types of food can be correlated with ethnicity, geography, and potentially migration patterns. </p>
+<h2>Statement of Innovation</h2>
+<p>This product is unique in the market and aims to expand the toolset that can be used to understand people, culture, community, and humanity. By embracing food as the primary connector, we are able get hooks into factors that transcend humanity into a more fundamental factor of life. Food is best shared and connections are made at the dinner table. Any attempts to foster those kinds of connections from table to table will surely have impacts on how people connect with one another. </p>
+<h2>Overview of Design Implementation</h2>
+<p>With the design of this product, the focus should be put on recalling, capturing, and documenting the moments that occur when a person prepares food for a loved one. This lasting, symbolic instance is how memories are made, communities are strengthened, and achievements are celebrated. As users move through the product, the focus shifts from the individual, to the immediate family, then to the global community. Users first answer questions about their own food preferences and are offered the option to take a DNA test to validate their preferences, and potentially discover other traits about taste, flavor, and ethnicity. Next they shift to cataloging favorite meals and family recipes, remembering the food their parents and grandparents used to make. Lastly they are shown the roots of those menus, where certain preparations originated from, information about the ingredients that might have been used in that region, and what other dishes from around the world also carry the traits and ingredients that the user prefers. If the user’s ancestor were from a group whose sustenance crop was wheat, they are shown similar recipes from other cultures with the same sustenance crop -or cultures with similar ingredients, or places that were colonized by the same empires.</p>
+<p>Gastronaut should feel like you’re being invited to share your family meals with other people from around the world. By fostering connections, connections can be made that were not possible before.</p>
 
+
+	<br>
+
+
+		<h2>Prototype</h2>
+		<div class="ui bordered fluid images" style="text-align:center">
+		<img class="ui image" src="themes/basic/assets/images/gastro/Requirements.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/Landing.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/FoodQuestions.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/Discovery.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/DNA_Result.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/Profile.jpg">
+		<img class="ui image" src="themes/basic/assets/images/gastro/Recipe.jpg">
+
+		</div>
+	</div>
+	
+</div>
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
